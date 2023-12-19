@@ -9,14 +9,17 @@ typedef struct Node
 } Node;
 Node *createdNode(int);
 Node *toInsert(Node *, Node *);
-
+int updatedHeight(Node *);
 void main()
 {
     Node *root = createdNode(4);
     Node *tree = toInsert(root, createdNode(5));
     toInsert(root, createdNode(6));
-    printf("%d %d \n", tree->right->value, tree->right->height);
-    printf("%d ", tree->right->right->value);
+    printf("%d \n", root->height);
+    printf("%d \n", root->right->height);
+    printf("%d \n", root->right->right->height);
+    system("pause");
+    return;
 }
 
 Node *createdNode(int value)
@@ -29,6 +32,13 @@ Node *createdNode(int value)
     return node;
 }
 
+int updatedHeight(Node *root)
+{
+    int leftHeight = root->left == NULL ? 0 : root->left->height;
+    int rightHeight = root->right == NULL ? 0 : root->right->height;
+    return leftHeight > rightHeight ? leftHeight : rightHeight;
+}
+
 Node *toInsert(Node *root, Node *nextNode)
 {
     if (root == NULL)
@@ -38,10 +48,12 @@ Node *toInsert(Node *root, Node *nextNode)
     if (root->value > nextNode->value)
     {
         root->left = toInsert(root->left, nextNode);
+        root->height = 1 + updatedHeight(root);
     }
     if (root->value < nextNode->value)
     {
         root->right = toInsert(root->right, nextNode);
+        root->height = 1 + updatedHeight(root);
     }
     return root;
 }
