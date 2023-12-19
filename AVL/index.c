@@ -10,10 +10,13 @@ typedef struct Node
 Node *createdNode(int);
 Node *toInsert(Node *, Node *);
 int updatedHeight(Node *);
+int updatedBalanceFactor(Node *);
+
 void main()
 {
-    Node *root = createdNode(4);
+    Node *root = createdNode(3);
     Node *tree = toInsert(root, createdNode(5));
+    toInsert(root, createdNode(2));
     toInsert(root, createdNode(6));
     printf("%d \n", root->height);
     printf("%d \n", root->right->height);
@@ -39,6 +42,13 @@ int updatedHeight(Node *root)
     return leftHeight > rightHeight ? leftHeight : rightHeight;
 }
 
+int updatedBalanceFactor(Node *root)
+{
+    int leftHeight = root->left == NULL ? 0 : root->left->height;
+    int rightHeight = root->right == NULL ? 0 : root->right->height;
+    return leftHeight - rightHeight;
+}
+
 Node *toInsert(Node *root, Node *nextNode)
 {
     if (root == NULL)
@@ -55,5 +65,7 @@ Node *toInsert(Node *root, Node *nextNode)
         root->right = toInsert(root->right, nextNode);
         root->height = 1 + updatedHeight(root);
     }
+    int balanceFactor = updatedBalanceFactor(root);
+    printf("balanceFactor# %d : %d\n", root->value,balanceFactor);
     return root;
 }
