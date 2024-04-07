@@ -70,6 +70,12 @@ public class ArithmeticStack_v2 {
                                 operation.push(topElement);
                                 break;
                             }
+
+                            // Avoid to "+"" or "-" to pop from operation stack.
+                            if (getOperationPriority(topElement) < getOperationPriority(element)) {
+                                operation.push(topElement);
+                                break;
+                            }
                             postfix.add(topElement);
                         }
                         operation.push(element);
@@ -140,23 +146,52 @@ public class ArithmeticStack_v2 {
         ArrayList<String> expression = new ArrayList<>();
 
         // 1. Input infix.
-        expression.add("(");
-        expression.add("(");
-        expression.add("3");
-        expression.add("+");
-        expression.add("4");
-        expression.add(")");
-        expression.add("*");
-        expression.add("2");
-        expression.add(")");
-        expression.add("/");
-        expression.add("7");
+        // expression.add("(");
+        // expression.add("(");
+        // expression.add("3");
+        // expression.add("+");
+        // expression.add("4");
+        // expression.add(")");
+        // expression.add("*");
+        // expression.add("2");
+        // expression.add(")");
+        // expression.add("/");
+        // expression.add("7");
 
         // expression.add("3");
         // expression.add("+");
         // expression.add("2");
         // expression.add("*");
         // expression.add("5");
+        // Test with ((3*2+2)-4)+3*5 = 19
+        // expression.add("(");
+        // expression.add("(");
+        // expression.add("3");
+        // expression.add("*");
+        // expression.add("2");
+        // expression.add("+");
+        // expression.add("2");
+        // expression.add(")");
+        // expression.add("-");
+        // expression.add("4");
+        // expression.add(")");
+        // expression.add("+");
+        // expression.add("3");
+        // expression.add("*");
+        // expression.add("5");
+
+        // Test 11*11-5*6/3+10 = 121
+        expression.add("11");
+        expression.add("*");
+        expression.add("11");
+        expression.add("-");
+        expression.add("5");
+        expression.add("*");
+        expression.add("6");
+        expression.add("/");
+        expression.add("3");
+        expression.add("+");
+        expression.add("10");
 
         // 2. To Postfix.
         Postfix solution = new ArithmeticStack_v2.Postfix(expression)
