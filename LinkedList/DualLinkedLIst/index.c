@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-// #include <string.h>
 enum Direct
 {
     toward = 1,
@@ -59,11 +58,6 @@ void toShow(Node *root, int order)
         return;
     }
     printf("Print order: %s\t", order == TOWARD ? "Toward" : "Backward");
-    // if (!strcmp(order, "toward") || !strcmp(order, "reverse"))
-    // {
-    //     printf("Invalid order.");
-    //     return;
-    // }
     if (order == BACKWARD)
     {
         Node *search = curr;
