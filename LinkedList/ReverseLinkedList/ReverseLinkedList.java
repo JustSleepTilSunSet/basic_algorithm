@@ -1,3 +1,5 @@
+import org.w3c.dom.Node;
+
 class ReverseLinkedList {
     static class Node {
         int value = 0;
@@ -42,34 +44,26 @@ class ReverseLinkedList {
 
     public static void main(String[] args) {
         // Initialize node head.
-        Node head = new ReverseLinkedList.Node(0);
+        Node head = new ReverseLinkedList.Node(1);
         NodeAction manager = new NodeAction(head);
-        manager.toAdd(new Node(1));
         manager.toAdd(new Node(2));
         manager.toAdd(new Node(3));
-        manager.toAdd(new Node(3));
+        manager.toAdd(new Node(4));
         // manager.showAll();
 
         // To reverse.
         Node mainHead = manager.getListHead();
         Node current = mainHead;
         Node previous = mainHead;
-        boolean isFirst = true;
-        while (current != null) {
-            // System.out.println(current.value);
-            Node forward = current.next;
-            // System.out.println(forward.value);
-            if (isFirst) {
-                previous.next = null;
-                isFirst = !isFirst;
-            }
-            current = forward == null ? current : forward;
-            forward = forward == null ? null : forward.next;// 確保未來指標永遠只在做最前面
+        Node forward = current.next!=null?current.next:null;
+        previous.next = null;
+        int index = 1;
+        while(forward!=null){
+            current = forward;
+            forward = forward.next;
             current.next = previous;
             previous = current;
-            current = forward;
         }
-
         while (previous != null) {
             System.out.print(previous.value + "->");
             previous = previous.next;
