@@ -14,3 +14,7 @@
 - Install JS in your Visual Studio Code:
   - Install nvm and set `node` to enviroment variable on terminal.
 
+#### Trace.
+  
+  - RoadOfCoding is a new project on 2024.Oct.
+    - We try to solve high frequency problem.
