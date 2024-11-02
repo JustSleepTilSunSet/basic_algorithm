@@ -1,0 +1,65 @@
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+ /*
+int one = 0,two = 0;
+void travel1(struct TreeNode* root)
+{ 
+    if(root != NULL)
+    {
+        one++;
+        travel1(root->left);
+    }
+}
+void travel2(struct TreeNode* root)
+{ 
+    if(root != NULL)
+    {
+        two++;
+        travel1(root->right);
+    }
+}
+bool isBalanced(struct TreeNode* root)
+{
+    if (root == NULL)
+        return true;
+    if (root != NULL)
+     {
+        if (root->left  == NULL ||root->right == NULL)
+            return true;
+     }
+    travel1(root->left);
+    travel2(root->right);
+    if(one - two == 1 || one - two == -1)
+        return true;
+    else
+        return false;
+}
+*/
+
+int HeightTree(struct TreeNode* root){
+    if(!root){return 0;}
+
+    int hleft = HeightTree(root->left);
+    int hrigt = HeightTree(root->right);
+    
+    return hleft > hrigt ? (hleft + 1) : (hrigt +1);
+}
+
+bool isBalanced(struct TreeNode* root) {
+    if(!root) return true;
+
+    int tleft = HeightTree(root->left);
+    int trigt = HeightTree(root->right);
+    
+    if(abs(tleft - trigt) <= 1){
+        return isBalanced(root->left) && isBalanced(root->right);
+    }else{
+        return false; 
+    }
+}
