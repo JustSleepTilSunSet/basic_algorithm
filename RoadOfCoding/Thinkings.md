@@ -8,6 +8,7 @@
 |Question|Level|Thinking|Pass|
 |--|--|--|--|
 |[121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)|Easy|[Thinking](https://github.com/JustSleepTilSunSet/basic_algorithm/blob/main/RoadOfCoding/DP/96.%20Unique%20Binary%20Search%20Trees/Thinking.md)|Y|
+|[53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/)|Medium|None|Y|
 
 ### Tree
 |Question|Level|Thinking|Pass|
