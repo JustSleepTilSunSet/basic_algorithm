@@ -1,0 +1,54 @@
+/*
+int maxSubArray(int* nums, int numsSize)
+{
+    int sum = 0, max = 0;
+    int i = 0, temp = 0;
+    
+    for(i=0;i<numsSize;i++)
+    {
+        sum = sum + nums[i];
+    }
+    max = sum;
+    temp = sum;
+    for(i=numsSize;i<1;i--)
+    {
+        temp = temp - nums[i-1];
+        if(max < temp)
+            max = temp;
+    }
+    temp = sum;
+    for(i=0;i<numsSize;i++)
+    {
+        temp = temp - nums[i];
+        if(max < temp)
+            max = temp;
+    }
+    temp = sum;
+    for(i=0;i<(numsSize/2)-1;i++)
+    {
+        temp = temp - nums[i];
+        temp = temp - nums[numsSize - i -1];
+        if(max < temp)
+            max = temp;
+    }
+    return max;
+}*/
+
+int maxSubArray(int* nums, int numsSize)
+{
+    int sum=nums[0];
+    int maxsum=nums[0];
+    for(int i=1;i<numsSize;i++)
+    {
+        if(sum<0)
+        {
+            if(nums[i]>sum)
+                sum=nums[i];
+        }
+        else
+            sum=sum+nums[i];
+        if(sum>maxsum)
+            maxsum=sum;
+    }
+    return maxsum;
+}
