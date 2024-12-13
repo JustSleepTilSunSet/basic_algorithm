@@ -1,13 +1,16 @@
 # 26. Remove Duplicates from Sorted Array
 ### 題目大意：
 - 把重複元素的list做成一個set;但不可以額外創建array，必須原地修改nums的值;並且return set的長度。
+- 這裡有個細節，題目在機制上，不需要真的去修剪成一個set！只要給return 有效的長度，答案就只會搜尋到有效的長度處。
+  
 ### symbol def. :
 - x: don't care.
 - start index(si) : 部分array要設定成不同的元素
 - tp(transport index) : 下一個可以設定的位置
 
 ### 思路
-- v1思路(這方法在剔除重複元素的時候有問題），無法處理[1,1,1,1,1]< 因為沒有參照目標。
+- v1思路(這方法在剔除重複元素的時候有問題，講究真的去將nums修剪成一個set），無法處理[1,1,1,1,1]< 因為沒有參照目標。
+- n^2法
   
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 
 --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
@@ -78,6 +81,8 @@ class Solution(object):
 ----
 - v2思路：
 - v2在思路上完美地避免了，無參照的問題，因為有效範圍至少必選一個
+- n^2法
+  
 ```python
 class Solution(object):
     def removeDuplicates(self, nums):
@@ -95,4 +100,24 @@ class Solution(object):
                 validIndex = validIndex + 1;
                 si = validIndex;
         return validIndex
+```
+---
+- 其他思路:
+  - 或許，我們還能更高效，既然我們已經有前面的邏輯了，這是不是代表，其實不用去操作"覆蓋元素"的動作呢？
+  - 實際上只要找到一個不同就可以直接覆蓋過去，而後騰出可以覆蓋的位置(即為si＋１)
+  - n法
+    
+``` python
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        si = 1;
+        for i in range(1,len(nums)):
+            if nums[i-1]!=nums[i]:
+                nums[si] = nums[i];
+                si = si + 1;
+        return si
 ```
