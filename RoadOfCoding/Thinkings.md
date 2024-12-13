@@ -10,6 +10,7 @@
 |[121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)|Easy|[Thinking](https://github.com/JustSleepTilSunSet/basic_algorithm/blob/main/RoadOfCoding/DP/96.%20Unique%20Binary%20Search%20Trees/Thinking.md)|Y|
 |[53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/)|Medium|None|Y|
 |[1. Two sum](https://leetcode.com/problems/two-sum/)|Easy|None|Y|
+|[26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)|Easy|[Thinking](https://github.com/JustSleepTilSunSet/Basic-algorithm/blob/main/RoadOfCoding/List/own_solution/26.%20Remove%20Duplicates%20from%20Sorted%20Array/Thinking.md)|Y|
 
 
 ### Tree
