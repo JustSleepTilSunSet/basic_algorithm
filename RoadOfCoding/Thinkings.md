@@ -11,7 +11,7 @@
 |[53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/)|Medium|None|Y|
 |[1. Two sum](https://leetcode.com/problems/two-sum/)|Easy|None|Y|
 |[26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)|Easy|[Thinking](https://github.com/JustSleepTilSunSet/Basic-algorithm/blob/main/RoadOfCoding/List/own_solution/26.%20Remove%20Duplicates%20from%20Sorted%20Array/Thinking.md)|Y|
-| [27.Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-element/)|Easy|[Thinking](https://github.com/JustSleepTilSunSet/Basic-algorithm/blob/main/RoadOfCoding/List/own_solution/26.%20Remove%20Duplicates%20from%20Sorted%20Array/Thinking.md)|Y|
+| [27.Remove Element](https://leetcode.com/problems/remove-element/)|Easy|[Thinking](https://github.com/JustSleepTilSunSet/Basic-algorithm/blob/main/RoadOfCoding/List/own_solution/27.%20Remove%20Element/Thinking.md)|Y|
 
 ### Tree
 |Question|Level|Thinking|Pass|
