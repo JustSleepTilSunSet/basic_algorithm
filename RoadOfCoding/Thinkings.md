@@ -2,7 +2,7 @@
 |Question|Level|Thinking|Pass|
 |--|--|--|--|
 |[96. Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees/description/)|Medium|[Thinking](https://github.com/JustSleepTilSunSet/basic_algorithm/blob/main/RoadOfCoding/DP/96.%20Unique%20Binary%20Search%20Trees/Thinking.md)|N|
-
+|[3381. Maximum Subarray Sum With Length Divisible by K](https://leetcode.com/problems/maximum-subarray-sum-with-length-divisible-by-k/)|Medium|[Thinking](https://github.com/JustSleepTilSunSet/Basic-algorithm/blob/main/RoadOfCoding/DP/3381.%20Maximum%20Subarray%20Sum%20With%20Length%20Divisible%20by%20K/Thinking.md)|N|
 
 ### List
 |Question|Level|Thinking|Pass|
