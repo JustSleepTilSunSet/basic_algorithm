@@ -4,6 +4,8 @@
 |[96. Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees/description/)|Medium|[Thinking](https://github.com/JustSleepTilSunSet/basic_algorithm/blob/main/RoadOfCoding/DP/96.%20Unique%20Binary%20Search%20Trees/Thinking.md)|N|
 |[3381. Maximum Subarray Sum With Length Divisible by K](https://leetcode.com/problems/maximum-subarray-sum-with-length-divisible-by-k/)|Medium|[Thinking](https://github.com/JustSleepTilSunSet/Basic-algorithm/blob/main/RoadOfCoding/DP/3381.%20Maximum%20Subarray%20Sum%20With%20Length%20Divisible%20by%20K/Thinking.md)|N|
 |[22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/description/?envType=problem-list-v2&envId=dynamic-programming)|Medium|[Thinking](https://github.com/JustSleepTilSunSet/Basic-algorithm/blob/main/RoadOfCoding/DP/22.%20Generate%20Parentheses/Thinking.md)|N|
+|[322. Coin Change](https://leetcode.com/problems/coin-change/description/)|Medium|[Thinking](https://github.com/JustSleepTilSunSet/Basic-algorithm/blob/main/RoadOfCoding/DP/322.%20Coin%20Change/Thinking.md)|N|
+
 
 
 ### List
