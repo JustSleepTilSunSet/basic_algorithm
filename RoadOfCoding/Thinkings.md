@@ -17,6 +17,8 @@
 |[26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)|Easy|[Thinking](https://github.com/JustSleepTilSunSet/Basic-algorithm/blob/main/RoadOfCoding/List/own_solution/26.%20Remove%20Duplicates%20from%20Sorted%20Array/Thinking.md)|Y|
 | [27.Remove Element](https://leetcode.com/problems/remove-element/)|Easy|[Thinking](https://github.com/JustSleepTilSunSet/Basic-algorithm/blob/main/RoadOfCoding/List/own_solution/27.%20Remove%20Element/Thinking.md)|Y|
 | [90. Subsets II](https://leetcode.com/problems/subsets-ii/description/)|Medimum|[Thinking](https://github.com/JustSleepTilSunSet/Basic-algorithm/blob/main/RoadOfCoding/List/own_solution/90.%20Subsets%20II/Thinking.md)|Y|
+| [39. Combination Sum](https://leetcode.com/problems/combination-sum/description/) | Medimum | [Thinking](https://github.com/JustSleepTilSunSet/Basic-algorithm/blob/main/RoadOfCoding/List/own_solution/39.%20Combination%20Sum/Thinking.md) |
+
 ### Tree
 |Question|Level|Thinking|Pass|
 |--|--|--|--|
